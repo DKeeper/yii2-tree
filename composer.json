@@ -4,12 +4,16 @@
 	"type": "yii2-extension",
 	"keywords": ["yii2","extension","tree view"],
 	"license": "GPL-3.0+",
+    "version": "1.0.0",
 	"authors": [
 		{
 			"name": "DKeeper",
 			"email": "dkapenkin@rambler.ru"
 		}
 	],
+    "require": {
+        "yiisoft/yii2": "*"
+    },
 	"autoload": {
 		"psr-4": {
 			"dkeeper\\tree\\": ""
