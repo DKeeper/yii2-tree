@@ -17,6 +17,8 @@ class Tree extends \yii\base\Widget
 
     public $name;
 
+    public $script;
+
     public function init(){
         if(!isset($this->options['id'])){
             $this->options['id'] = $this->getId();
@@ -29,7 +31,7 @@ class Tree extends \yii\base\Widget
         echo \yii\helpers\Html::tag('ul','',$this->options);
         $script = "
         $.fn.zTree.init($('#".$this->options['id']."'), ".\yii\helpers\Json::encode($this->treeOptions).", ".\yii\helpers\Json::encode($this->dataSource).");
-        ";
+        ".$this->script;
         $this->view->registerJs($script,\yii\web\View::POS_LOAD);
     }
 }
